@@ -1,0 +1,6 @@
+%h1 Photogram
+
+-@snaps.each do |snap|
+  .row
+    =link_to (image_tag snap.photo.url(:medium)), snap_path(snap)
+    %p= snap.description
